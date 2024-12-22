@@ -1,0 +1,63 @@
+/* Make <body> a flex container and stack its child elements vertically */
+body {
+    display: flex;
+    flex-direction: column; /* Stack header, main, and footer vertically */
+    font-family: Arial, sans-serif; /* Add a default font */
+}
+
+/* Style the header and the logo */
+header {
+    background-color: #333; /* Dark background for the header */
+    color: white; /* White text color for the header */
+    padding: 10px 0; /* Padding on top and bottom */
+    text-align: center; /* Center the header content */
+}
+
+header ul {
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align the items horizontally */
+    align-items: center;
+}
+
+header li {
+    margin: 0 15px; /* Spacing between items */
+}
+
+header .logo {
+    font-size: 40px; /* Make the logo character large */
+    color: gold; /* Give the logo a golden color */
+    margin-right: 15px; /* Add some space to the right of the logo */
+}
+
+/* Make <main> a flex container and place article and aside side by side */
+main {
+    display: flex;
+    flex-direction: row; /* Arrange article and aside horizontally */
+    flex: auto; /* Make <main> flexible with automatic height/width */
+    padding: 20px; /* Add some padding inside the main content */
+}
+
+/* Make article take up 2/3 of the width */
+article {
+    flex: 2; /* 2 parts of the 3-part layout */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 20px; /* Padding inside the article */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the article */
+}
+
+/* Make aside take up 1/3 of the width */
+aside {
+    flex: 1; /* 1 part of the 3-part layout */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding inside the aside */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around the aside */
+}
+
+/* Add responsiveness for smaller screens (like smar
